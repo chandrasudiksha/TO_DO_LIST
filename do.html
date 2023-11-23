@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="bumblebee">
+
+<head>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon">
+
+    <title>To Do List</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>To Do List</h1>
+
+            <div class="input-section">
+                <input id="todo-input" type="text" placeholder="Add your task here.."
+                    class="input w-full max-w-xs" />
+                <input id="todo-date" type="text" placeholder="Due Date"
+                    class="input w-half max-w-xs" onfocus="(this.type='date')" onblur="(this.type='text')"/>
+                <button id="add-button" class="btn btn-add ">
+                    <i class="bx bx-plus bx-sm"></i>
+                </button>
+            </div>
+        </header>
+        <div class="filters">
+            <div class="dropdown">
+                <button class="dropbtn">Filter</button>
+                <div class="dropdown-content">
+                    <a href="#" id="all">All</a>
+                    <a href="#" id="rem">Pending</a>
+                    <a href="#" id="com">Completed</a>
+                    <a href="#" id="date">Due Date</a>
+                </div>
+            </div>
+            <div class="completed-task">
+                <p>Completed: <span id="c-count">0</span></p>
+            </div>
+            <div class="remaining-task">
+                <p>Total Tasks: <span id="r-count">0</span></p>
+            </div>
+        </div>
+
+        <ul id="all-todos" class="todos-list">
+
+        </ul>
+
+
+        <div class="todos-filter">
+
+            <button id="delete-selected" class="btn btn-ghost delete-selected-btn">
+                Delete Selected
+            </button>
+            <button id="delete-all" class="btn btn-ghost delete-all-btn">
+                Delete All
+            </button>
+        </div>
+        <a href="login.html"><button id="" class="btn btn-logout">
+            LogOut
+        </button></a>
+    </div>
+    
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
